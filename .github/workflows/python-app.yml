@@ -34,6 +34,7 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
+        "python.linting.pylintArgs": ["--errors-only"]
     - name: Test with pytest
       run: |
         pytest
